@@ -1,0 +1,18 @@
+<html>
+<body>
+<input id = "username" type = "text" name = "username"
+       placeholder = "Enter alias here">
+<input id = "interest" type = "text" name = "interests"
+       placeholder = "Enter interests separated by comma"> <br ><br ><br >
+<!--<textarea rows="4" cols="50" placeholder="Describe yourself here..."></textarea>-->
+<textarea rows="4" cols="50"  id = "post" name="post" placeholder=" Enter your post here "></textarea>
+<input type = "submit" name = "button" onclick = "fun()">
+<script type="text/javascript">
+function fun() {
+    var post = document.getElementById("post").value;
+    var url= "/add/post".concat(document.getElementById("username").value.concat("|").concat(document.getElementById("interest").value)).concat("|").concat(post);
+    setTimeout(function(){window.location = url;}, 3);
+}
+</script>
+</body>
+</html>

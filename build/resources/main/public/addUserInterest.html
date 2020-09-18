@@ -1,0 +1,15 @@
+<html>
+<body>
+<input id = "username" type = "text" name = "username"
+       placeholder = "Enter alias here">
+<input id = "interest" type = "text" name = "interests"
+       placeholder = "Enter interests separated by comma">
+<input type = "submit" name = "button" onclick = "fun()">
+<script type="text/javascript">
+function fun() {
+    var url= "/interest/add/".concat(document.getElementById("username").value.concat(",").concat(document.getElementById("interest").value));
+    setTimeout(function(){window.location = url;}, 3);
+}
+</script>
+</body>
+</html>
